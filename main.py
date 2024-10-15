@@ -58,3 +58,4 @@ speak(text)
 
 #or
 #speak(takeCommand())
+print("OK")
