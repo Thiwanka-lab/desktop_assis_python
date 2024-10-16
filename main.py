@@ -53,9 +53,23 @@ def takeCommand():
 # takeCommand()
 
 """Also we can create a logic to speak what i am saying"""
-text = takeCommand()
-speak(text)
+#text = takeCommand()
+#speak(text)
 
 #or
 #speak(takeCommand())
 
+"""This is a logic where I can search wikipedia according to the query """
+if __name__ == "__main__":
+    
+    query = takeCommand().lower()
+    #print(query)
+
+    if "wikipedia" in query:
+        query = query.replace("wikipedia","")
+        #print (query)
+        result = wikipedia.summary(query, sentences = 2)
+        
+        speak("according to wikipedia")
+        print(result)
+        speak(result)
