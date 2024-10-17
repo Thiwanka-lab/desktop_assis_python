@@ -1,9 +1,7 @@
-
 import wikipedia
 import webbrowser
+import os
 import streamlit as st
-
-
 
 from src.helper import speak, takeCommand, wish_me
 
@@ -15,7 +13,8 @@ if __name__ == "__main__":
 
     while True:
 
-        st.title("Desktop Assistant System")
+    
+        st.title("Desktop Assistant")
 
         query = takeCommand().lower()
         #print(query)
@@ -37,6 +36,6 @@ if __name__ == "__main__":
             speak("Opening github")
             webbrowser.open("github.com")
             
-        elif "goodbye" in query:
+        elif "exit" in query:
             speak("Ok sir. Thank you. Bye bye ")
             exit()

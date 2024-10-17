@@ -15,7 +15,7 @@ voices= engine.getProperty('voices')
 #print(voices[1].id)
 
 engine.setProperty('voice',voices[0].id)
-engine.setProperty('rate', 140)
+engine.setProperty('rate', 150)
 
 # speak function
 

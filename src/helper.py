@@ -4,6 +4,7 @@ import datetime
 
 
 
+
 # Taking voice from the system
 
 engine = pyttsx3.init('sapi5')
@@ -12,7 +13,7 @@ voices= engine.getProperty('voices')
 #print(voices[1].id)
 
 engine.setProperty('voice',voices[0].id)
-engine.setProperty('rate', 150)
+engine.setProperty('rate', 170)
 
 # speak function
 
@@ -28,13 +29,13 @@ def wish_me():
     now = datetime.datetime.now()
     hour = now.hour
     if hour >=0 and hour<12:
-        speak("Good Morning sir. how may I assist you")
+        speak("  Good Morning sir. how may I assist you")
 
     elif hour >=12 and hour<18:
-        speak("Good afternoon sir. how may I assist you")
+        speak("  Good afternoon sir. how may I assist you")
 
     else:
-        speak("Good evening sir. how may I assist you")
+        speak("  Good evening sir. how may I assist you")
 
 
 # Speech Recognition function
