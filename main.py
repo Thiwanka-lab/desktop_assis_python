@@ -25,8 +25,22 @@ def speak(text):
 
 #speak("Thiwanka, how are you")
 
+# The Function for greetings using date and time
 
-# Speech recognition function
+def wish_me():
+    now = datetime.datetime.now()
+    hour = now.hour
+    if hour >=0 and hour<12:
+        speak("Good Morning sir. how may I assist you")
+
+    elif hour >=12 and hour<18:
+        speak("Good afternoon sir. how may I assist you")
+
+    else:
+        speak("Good evening sir. how may I assist you")
+
+
+# Speech Recognition function
 
 def takeCommand():
     """This function will recognize voice and return text"""
@@ -53,8 +67,8 @@ def takeCommand():
 # takeCommand()
 
 """Also we can create a logic to speak what i am saying"""
-#text = takeCommand()
-#speak(text)
+# text = takeCommand()
+# speak(text)
 
 #or
 #speak(takeCommand())
@@ -73,3 +87,12 @@ if __name__ == "__main__":
         speak("according to wikipedia")
         print(result)
         speak(result)
+
+    elif "youtube" in query:
+        speak("Opening Youtube")
+        webbrowser.open("youtube.com") 
+    
+    elif "github" in query:
+        speak("Opening github")
+        webbrowser.open("github.com")
+        
